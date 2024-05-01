@@ -103,13 +103,13 @@ def main():
     parser.add_argument('--month', '-m', nargs='?', help='Month')
     parser.add_argument('--output', '-o', default='cicoReport', help='Output file name')
 
-    # Optional argument for person's name
+    # Optional argument for persons' names
     parser.add_argument('--name', '-n', nargs='*', default=None, help='Name(s) of the person(s)')
 
     args = parser.parse_args()
 
-    file_path = input("Please provide .xls file path: ") # Update with your file path
-    sheet_name = input("Please provide sheet name: ")      # Update with your sheet name
+    file_path = input("Please provide .xls file path: ")
+    sheet_name = input("Please provide sheet name: ")
     
     timestamps_by_person = get_timestamps_by_person(file_path, sheet_name)
 
