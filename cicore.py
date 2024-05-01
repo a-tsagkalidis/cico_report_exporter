@@ -56,7 +56,7 @@ def get_timestamps_by_person(file_path, sheet_name):
         exit()
 
 
-def export_to_excel(timestamps_by_person, output_file, name=None, year=None, month=None):
+def export_to_excel(timestamps_by_person, output_file, names=None, year=None, month=None):
     wb = Workbook()
     ws = wb.active
 
@@ -68,7 +68,7 @@ def export_to_excel(timestamps_by_person, output_file, name=None, year=None, mon
     # Write data
     row_idx = 2
     for person, person_data in timestamps_by_person.items():
-        if name is not None and person != name:
+        if names is not None and person not in names:
             continue
         for person_year, year_data in person_data.items():
             if year is not None and person_year != year:
@@ -104,7 +104,7 @@ def main():
     parser.add_argument('--output', '-o', default='cicoReport', help='Output file name')
 
     # Optional argument for person's name
-    parser.add_argument('--name', '-n', nargs='?', default=None, help='Name of the person')
+    parser.add_argument('--name', '-n', nargs='*', default=None, help='Name(s) of the person(s)')
 
     args = parser.parse_args()
 
