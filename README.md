@@ -33,6 +33,8 @@ pip install -r requirements.txt
 python cicoReportExporter.py [--year YEAR] [--month MONTH] [--output OUTPUT_FILE] [--name NAME]
 ```
 
+- You will be prompted for the .xsl file path as well as the sheet name which the database to be analyzed is stored.
+
 ## Arguments
 - `--year, -y`: Specify the year for filtering the data (optional).
 - `--month, -m`: Specify the month for filtering the data (optional).
