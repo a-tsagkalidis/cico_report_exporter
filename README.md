@@ -4,6 +4,8 @@
 ## Overview
 This Python script retrieves timestamps from an Excel file containing swipe records and exports them to a new Excel file. It allows you to filter the data by person's name, year, and month.
 
+<p style='color: red;'>Script was initially generated with AI assistance.</p>
+
 ## Prerequisites
 - Python 3.x
 - xlrd library for reading Excel files
