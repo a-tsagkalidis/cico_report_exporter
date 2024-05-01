@@ -15,7 +15,9 @@ This Python script retrieves timestamps from an Excel file containing swipe reco
         
 ```bash
 python -m venv .venv
-source .v
+```
+```bash
+source .venv/Scripts/activate
 ```
 
 3. Install the required packages:
